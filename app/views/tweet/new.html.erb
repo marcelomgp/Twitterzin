@@ -1,0 +1,30 @@
+<h2>Este é o seu twitter particular...</h2>
+
+<p>Fique a vontade, pode twittar o que quiser!</p><br>
+
+<%= form_for :tweet, url: tweet_index_path do |f| %>
+  <p>
+    <%= f.label :'Digite aqui o seu tweet:' %><br>
+    <%= f.text_field :msg %> 
+  </p>
+  <p>
+    <%= f.submit 'Twittar :)' %>
+<% end %>
+<p>
+<h3>Lista dos seus tweets:</h3>
+<table>
+  <% @tweet_item.each do |tweet| %>
+    <tr>
+      <td>
+        <%= tweet.msg %>
+      </td>
+      <td>
+        <%= link_to 'Excluir', tweet_path(tweet), method: :delete, data: {confirm: "Tem certeza que deseja deletar seu tweetzinho?"} %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<p>
+  <%= link_to 'Deslogar', tweet_index_path %>
+</p>
+
