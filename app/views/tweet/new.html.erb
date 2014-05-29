@@ -1,6 +1,6 @@
-<h2>Este é o seu twitter particular...</h2>
+<h2> Olá <%= current_user.email %>! Este é o seu twitter particular...</h2>
 
-<p>Fique a vontade, pode twittar o que quiser!</p><br>
+<p>Fique à vontade, pode twittar o que quiser!</p><br>
 
 <%= form_for :tweet, url: tweet_index_path do |f| %>
   <p>
@@ -25,7 +25,7 @@
   <% end %>
 </table>
 <p>
-  <%= link_to 'Deslogar', tweet_index_path %>
+  <%= link_to 'Deslogar', destroy_user_session_path, method: :delete, data: {confirm: "Já quer vazar?"}%>
 </p>
 
 
