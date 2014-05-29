@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Tweet.create([{msg: 'Seed asad'}, {msg: 'Seed asad'}, {msg: 'Seed asad'}, {msg: 'Seed asad'}, {msg: 'Seed asad'}])
