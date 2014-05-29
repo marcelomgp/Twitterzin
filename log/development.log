@@ -3893,3 +3893,1493 @@ Started GET "/tweet" for 127.0.0.1 at 2014-05-28 17:34:49 -0300
 Processing by TweetController#index as HTML
   Rendered tweet/index.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20140528210826)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140528210826"]]
+  [1m[36m (152.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:22:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TweetController#index as HTML
+Completed 401 Unauthorized in 13ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:22:12 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (2.0ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 87ms (Views: 78.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:12 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:12 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:12 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:12 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:12 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:22:22 -0300
+Processing by TweetController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:22:22 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:22 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:22 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:22 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:22 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:22 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:22 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:22 -0300
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:22:28 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:28 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:28 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:28 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:28 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:28 -0300
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:22:29 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 1ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:29 -0300
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:29 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:29 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:29 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:29 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:29 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:29 -0300
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:22:33 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:33 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:22:33 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:33 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:33 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:33 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:33 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:22:33 -0300
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:23:32 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 1ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 15ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:23:32 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:32 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:32 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:32 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:23:32 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:32 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:32 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:23:35 -0300
+Processing by TweetController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:23:35 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:23:35 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:35 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:35 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:35 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:23:35 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:35 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:23:35 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:26:59 -0300
+Processing by TweetController#index as HTML
+  Rendered tweet/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:26:59 -0300
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:26:59 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:26:59 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:26:59 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:26:59 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:26:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:26:59 -0300
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 11:27:01 -0300
+Processing by TweetController#new as HTML
+  [1m[35mTweet Load (0.9ms)[0m  SELECT "tweets".* FROM "tweets"
+  Rendered tweet/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:27:26 -0300
+Processing by TweetController#index as HTML
+  Rendered tweet/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:27:26 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:27:26 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:27:26 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:27:26 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:27:26 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:27:26 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:27:26 -0300
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 11:27:28 -0300
+Processing by TweetController#new as HTML
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets"[0m
+  Rendered tweet/new.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `before_action' for #<#<Class:0x000000022acae0>:0x00000005ba25c0>):
+    1: <% before_action :authenticate_user! %>
+    2: 
+    3: <h2>Este é o seu twitter particular...</h2>
+    4: 
+  app/views/tweet/new.html.erb:1:in `_app_views_tweet_new_html_erb___2819302172026099381_48039820'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.3ms)
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 11:27:28 -0300
+Processing by TweetController#new as HTML
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets"
+  Rendered tweet/new.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `before_action' for #<#<Class:0x000000022acae0>:0x000000058bc9f0>):
+    1: <% before_action :authenticate_user! %>
+    2: 
+    3: <h2>Este é o seu twitter particular...</h2>
+    4: 
+  app/views/tweet/new.html.erb:1:in `_app_views_tweet_new_html_erb___2819302172026099381_46520040'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:28:21 -0300
+Processing by TweetController#index as HTML
+  Rendered tweet/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:28:21 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:28:21 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:28:21 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:28:21 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:28:21 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:28:21 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:28:21 -0300
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 11:28:22 -0300
+Processing by TweetController#new as HTML
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets"[0m
+  Rendered tweet/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:29:34 -0300
+Processing by TweetController#index as HTML
+  Rendered tweet/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:29:34 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:29:34 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:29:34 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:29:34 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:29:34 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:29:34 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:29:34 -0300
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 11:29:35 -0300
+Processing by TweetController#new as HTML
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `before_action' for #<TweetController:0x00000005f994d0>):
+  app/controllers/tweet_controller.rb:10:in `new'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 11:29:35 -0300
+Processing by TweetController#new as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `before_action' for #<TweetController:0x00000005c13c98>):
+  app/controllers/tweet_controller.rb:10:in `new'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:30:57 -0300
+Processing by TweetController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:30:57 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.4ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 17ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:57 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:30:57 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:57 -0300
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:30:57 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:57 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:57 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:57 -0300
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:30:58 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 1ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.7ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:30:58 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:58 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:58 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:30:58 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:58 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:58 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:30:58 -0300
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 11:30:59 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.6ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:00 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:00 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:00 -0300
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:00 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:00 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:00 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:00 -0300
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-29 11:31:05 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.2ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 84ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:05 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:05 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:05 -0300
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:05 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:05 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:05 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:05 -0300
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-29 11:31:30 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.2ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 76ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:30 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:30 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:30 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:30 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:30 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:30 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:30 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:31:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TweetController#index as HTML
+Completed 401 Unauthorized in 12ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 11:31:43 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.2ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 48ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:43 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:43 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:43 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:43 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:43 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:43 -0300
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 11:31:45 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.4ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-29 11:31:50 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-05-29 14:31:50.726033"], ["email", "marcelo.menezesgp@gmail.com"], ["encrypted_password", "$2a$10$zay7BtGXAgYw.Ft1.IRnFex1ghqYwEuHMnWlW6Fo7WFPE31CMoPL6"], ["updated_at", "2014-05-29 14:31:50.726033"]]
+  [1m[36m (169.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["current_sign_in_at", "2014-05-29 14:31:50.900339"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-05-29 14:31:50.900339"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-05-29 14:31:50.903495"]]
+  [1m[35m (125.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 382ms (ActiveRecord: 296.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 11:31:51 -0300
+Processing by TweetController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered tweet/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:31:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:51 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:51 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:31:51 -0300
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 11:31:52 -0300
+Processing by TweetController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets"[0m
+  Rendered tweet/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tweet" for 127.0.0.1 at 2014-05-29 11:31:58 -0300
+Processing by TweetController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered tweet/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 11:32:00 -0300
+Processing by TweetController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mTweet Load (0.5ms)[0m  SELECT "tweets".* FROM "tweets"
+  Rendered tweet/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/tweet" for 127.0.0.1 at 2014-05-29 11:32:07 -0300
+Processing by TweetController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8bSa23nK6CwjdHhL3lbdy6DjFHRcyH2zAnsEbvcNtk=", "tweet"=>{"msg"=>"asdadasdad"}, "commit"=>"Twittar :)"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("created_at", "msg", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-29 14:32:07.272499"], ["msg", "asdadasdad"], ["updated_at", "2014-05-29 14:32:07.272499"]]
+  [1m[35m (230.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/tweet/new
+Completed 302 Found in 235ms (ActiveRecord: 231.3ms)
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 11:32:07 -0300
+Processing by TweetController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mTweet Load (0.6ms)[0m  SELECT "tweets".* FROM "tweets"
+  Rendered tweet/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 11:32:07 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 11:32:07 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 11:32:07 -0300
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 11:32:07 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 11:32:07 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 11:32:07 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 11:32:07 -0300
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 14:12:28 -0300
+Processing by TweetController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets"
+  Rendered tweet/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 14:12:28 -0300
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 14:12:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:28 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:28 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:28 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:28 -0300
+
+
+Started GET "/tweet" for 127.0.0.1 at 2014-05-29 14:12:31 -0300
+Processing by TweetController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered tweet/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 14:12:33 -0300
+Processing by TweetController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets"[0m
+  Rendered tweet/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweet" for 127.0.0.1 at 2014-05-29 14:12:34 -0300
+Processing by TweetController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered tweet/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweet" for 127.0.0.1 at 2014-05-29 14:12:38 -0300
+Processing by TweetController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered tweet/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 14:12:38 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 14:12:38 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:38 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:38 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:38 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:38 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 14:12:41 -0300
+Processing by TweetController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered tweet/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 14:12:41 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:41 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:41 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:41 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:41 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 14:12:41 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:41 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 14:12:43 -0300
+Processing by TweetController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered tweet/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 14:12:43 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:43 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:43 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:43 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 14:12:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:43 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 14:12:43 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 14:29:23 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TweetController#index as HTML
+Completed 401 Unauthorized in 12ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 14:29:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.1ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 55ms (Views: 40.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 14:29:24 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 14:29:24 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 14:29:24 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 14:29:24 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 14:29:24 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 14:29:24 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 14:29:24 -0300
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 14:29:55 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.4ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-29 14:30:02 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TKGnU0LTGJVUF+TnP26mtXG8LCcUPSdos8U4UH9y7fU=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.2ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 90ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-29 14:30:18 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TKGnU0LTGJVUF+TnP26mtXG8LCcUPSdos8U4UH9y7fU=", "user"=>{"email"=>"teste@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'teste@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-29 17:30:18.752976"], ["email", "teste@gmail.com"], ["encrypted_password", "$2a$10$v6KCBjfgzzCLd8LAdHHcBOODYhBeZ1EMw3VCrsV6RnT4ohLXKkrYS"], ["updated_at", "2014-05-29 17:30:18.752976"]]
+  [1m[35m (192.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 2  [["current_sign_in_at", "2014-05-29 17:30:18.949795"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-05-29 17:30:18.949795"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-05-29 17:30:18.952046"]]
+  [1m[36m (134.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 409ms (ActiveRecord: 328.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 14:30:19 -0300
+Processing by TweetController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered tweet/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 14:30:23 -0300
+Processing by TweetController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets"
+  Rendered tweet/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tweet" for 127.0.0.1 at 2014-05-29 14:30:32 -0300
+Processing by TweetController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TKGnU0LTGJVUF+TnP26mtXG8LCcUPSdos8U4UH9y7fU=", "tweet"=>{"msg"=>":)"}, "commit"=>"Twittar :)"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tweets" ("created_at", "msg", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-29 17:30:32.572973"], ["msg", ":)"], ["updated_at", "2014-05-29 17:30:32.572973"]]
+  [1m[35m (227.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/tweet/new
+Completed 302 Found in 234ms (ActiveRecord: 228.2ms)
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 14:30:32 -0300
+Processing by TweetController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets"
+  Rendered tweet/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweet" for 127.0.0.1 at 2014-05-29 14:30:34 -0300
+Processing by TweetController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered tweet/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 14:30:36 -0300
+Processing by TweetController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets"[0m
+  Rendered tweet/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tweet" for 127.0.0.1 at 2014-05-29 14:30:37 -0300
+Processing by TweetController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered tweet/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweet" for 127.0.0.1 at 2014-05-29 14:32:03 -0300
+Processing by TweetController#index as HTML
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 14:32:03 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tweet.css?body=1" for 127.0.0.1 at 2014-05-29 14:32:03 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 14:32:03 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 14:32:03 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 14:32:03 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 14:32:03 -0300
+
+
+Started GET "/assets/tweet.js?body=1" for 127.0.0.1 at 2014-05-29 14:32:03 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 14:32:03 -0300
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2014-05-29 14:32:05 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.7ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/passwords/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2014-05-29 14:32:10 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCSFa7ysZDxQvwNobz41a2JMdmZMXB6YRVyAGX0tnDE=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."reset_password_token" = 'c5a057f4302d6522e8112fd91c40110a45d8d1a3b61568aeb11273c185e80856'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `reset_password_token`
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "reset_password_sent_at" = ?, "reset_password_token" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["reset_password_sent_at", "2014-05-29 17:32:10.297840"], ["reset_password_token", "c5a057f4302d6522e8112fd91c40110a45d8d1a3b61568aeb11273c185e80856"], ["updated_at", "2014-05-29 17:32:10.298184"]]
+  [1m[36m (146.9ms)[0m  [1mcommit transaction[0m
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/devise-3.2.4/app/views/devise/mailer/reset_password_instructions.html.erb (1.3ms)
+
+Devise::Mailer#reset_password_instructions: processed outbound mail in 36.2ms
+Completed 500 Internal Server Error in 396ms
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  actionpack (4.1.1) lib/action_dispatch/http/url.rb:59:in `build_host_url'
+  actionpack (4.1.1) lib/action_dispatch/http/url.rb:40:in `url_for'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:666:in `url_for'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:395:in `url_for'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:228:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:179:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:268:in `block (2 levels) in define_url_helper'
+  actionpack (4.1.1) lib/action_dispatch/routing/routes_proxy.rb:31:in `edit_user_password_url'
+  actionpack (4.1.1) lib/action_dispatch/routing/routes_proxy.rb:34:in `method_missing'
+  devise (3.2.4) lib/devise/controllers/url_helpers.rb:50:in `edit_password_url'
+  devise (3.2.4) app/views/devise/mailer/reset_password_instructions.html.erb:5:in `__home_marcelo__rvm_gems_ruby_______gems_devise_______app_views_devise_mailer_reset_password_instructions_html_erb__1573461888455246803_48216060'
+  actionview (4.1.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:847:in `block in collect_responses'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:861:in `each'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:861:in `each_template'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:843:in `collect_responses'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:774:in `mail'
+  devise (3.2.4) lib/devise/mailers/helpers.rb:16:in `devise_mail'
+  devise (3.2.4) app/mailers/devise/mailer.rb:12:in `reset_password_instructions'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:580:in `block in process'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:577:in `process'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:568:in `initialize'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:551:in `new'
+  actionmailer (4.1.1) lib/action_mailer/base.rb:551:in `method_missing'
+  devise (3.2.4) lib/devise/models/authenticatable.rb:173:in `send_devise_notification'
+  devise (3.2.4) lib/devise/models/recoverable.rb:54:in `send_reset_password_instructions'
+  devise (3.2.4) lib/devise/models/recoverable.rb:100:in `send_reset_password_instructions'
+  devise (3.2.4) app/controllers/devise/passwords_controller.rb:13:in `create'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/mapper.rb:45:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/marcelo/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/marcelo/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/marcelo/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 14:45:25 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2014-05-29 14:45:27 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 14:45:29 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 14:45:31 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2014-05-29 14:45:34 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2014-05-29 14:45:43 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCSFa7ysZDxQvwNobz41a2JMdmZMXB6YRVyAGX0tnDE=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."reset_password_token" = '2a833e4a4c5d410cac730cecb03bddb66afa71f289f0c16969a1a08cde9d9576'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `reset_password_token`
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "reset_password_sent_at" = ?, "reset_password_token" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["reset_password_sent_at", "2014-05-29 17:45:43.112137"], ["reset_password_token", "2a833e4a4c5d410cac730cecb03bddb66afa71f289f0c16969a1a08cde9d9576"], ["updated_at", "2014-05-29 17:45:43.112862"]]
+  [1m[35m (188.6ms)[0m  commit transaction
+  Rendered devise/mailer/reset_password_instructions.html.erb (1.7ms)
+
+Devise::Mailer#reset_password_instructions: processed outbound mail in 20.3ms
+Completed 500 Internal Server Error in 216ms
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  app/views/devise/mailer/reset_password_instructions.html.erb:5:in `_app_views_devise_mailer_reset_password_instructions_html_erb__2016813615719458541_52621160'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.2ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2014-05-29 14:46:17 -0300
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/marcelo/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/marcelo/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/marcelo/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 14:46:20 -0300
+Processing by TweetController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 14:46:20 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2014-05-29 14:46:22 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2014-05-29 14:46:24 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCSFa7ysZDxQvwNobz41a2JMdmZMXB6YRVyAGX0tnDE=", "user"=>{"email"=>""}, "commit"=>"Send me reset password instructions"}
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2014-05-29 14:46:26 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCSFa7ysZDxQvwNobz41a2JMdmZMXB6YRVyAGX0tnDE=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."reset_password_token" = '0a74d4b51806f233ccfd9483385a8f8f1ba40429e7accd756026bacba3a494df'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `reset_password_token`
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "reset_password_sent_at" = ?, "reset_password_token" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["reset_password_sent_at", "2014-05-29 17:46:26.977529"], ["reset_password_token", "0a74d4b51806f233ccfd9483385a8f8f1ba40429e7accd756026bacba3a494df"], ["updated_at", "2014-05-29 17:46:26.977978"]]
+  [1m[36m (196.1ms)[0m  [1mcommit transaction[0m
+  Rendered devise/mailer/reset_password_instructions.html.erb (1.1ms)
+
+Devise::Mailer#reset_password_instructions: processed outbound mail in 24.1ms
+Completed 500 Internal Server Error in 225ms
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_user_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  app/views/devise/mailer/reset_password_instructions.html.erb:5:in `_app_views_devise_mailer_reset_password_instructions_html_erb__2016813615719458541_47879140'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 14:47:17 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2014-05-29 14:47:18 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2014-05-29 14:47:42 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCSFa7ysZDxQvwNobz41a2JMdmZMXB6YRVyAGX0tnDE=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."reset_password_token" = '2c34979666358756e93ccb3062e7d1e6b4e6cb15af6a75258d06de28e95c1e73'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `reset_password_token`
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "reset_password_sent_at" = ?, "reset_password_token" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["reset_password_sent_at", "2014-05-29 17:47:42.713023"], ["reset_password_token", "2c34979666358756e93ccb3062e7d1e6b4e6cb15af6a75258d06de28e95c1e73"], ["updated_at", "2014-05-29 17:47:42.713528"]]
+  [1m[35m (218.4ms)[0m  commit transaction
+  Rendered devise/mailer/reset_password_instructions.html.erb (2.6ms)
+
+Devise::Mailer#reset_password_instructions: processed outbound mail in 25.6ms
+Completed 500 Internal Server Error in 249ms
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  app/views/devise/mailer/reset_password_instructions.html.erb:5:in `_app_views_devise_mailer_reset_password_instructions_html_erb__2016813615719458541_22217540'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.1ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2014-05-29 14:49:49 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCSFa7ysZDxQvwNobz41a2JMdmZMXB6YRVyAGX0tnDE=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."reset_password_token" = 'ac8708694fd9a09d11df849e708bb71d4655c32bc0c2d8f23df7585f81484ac7'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `reset_password_token`
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "reset_password_sent_at" = ?, "reset_password_token" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["reset_password_sent_at", "2014-05-29 17:49:49.723653"], ["reset_password_token", "ac8708694fd9a09d11df849e708bb71d4655c32bc0c2d8f23df7585f81484ac7"], ["updated_at", "2014-05-29 17:49:49.723927"]]
+  [1m[36m (457.1ms)[0m  [1mcommit transaction[0m
+  Rendered devise/mailer/reset_password_instructions.html.erb (0.7ms)
+
+Devise::Mailer#reset_password_instructions: processed outbound mail in 13.6ms
+Completed 500 Internal Server Error in 474ms
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password. You can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  app/views/devise/mailer/reset_password_instructions.html.erb:5:in `_app_views_devise_mailer_reset_password_instructions_html_erb__2016813615719458541_22217540'
+
+
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/marcelo/.rvm/gems/ruby-2.1.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 14:51:41 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 14:51:46 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCSFa7ysZDxQvwNobz41a2JMdmZMXB6YRVyAGX0tnDE=", "user"=>{"email"=>"marcelo.menezesgp@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'marcelo.menezesgp@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["current_sign_in_at", "2014-05-29 17:51:46.590745"], ["sign_in_count", 2], ["updated_at", "2014-05-29 17:51:46.591166"]]
+  [1m[36m (152.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 225ms (ActiveRecord: 153.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 14:51:46 -0300
+Processing by TweetController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered tweet/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tweet/new" for 127.0.0.1 at 2014-05-29 14:51:48 -0300
+Processing by TweetController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets"
+  Rendered tweet/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.7ms)
