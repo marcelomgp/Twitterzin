@@ -47,3 +47,7 @@ gem 'devise-i18n'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :production do
+  gem 'heroku-deflater'
+  gem 'rails_12factor'
+end
