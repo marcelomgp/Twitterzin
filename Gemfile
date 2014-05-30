@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-require 'execjs'
-
 ruby '2.1.0'
+
+#require 'execjs'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
